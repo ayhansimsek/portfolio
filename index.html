@@ -82,14 +82,17 @@ body {
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
-  z-index: 100;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 3rem;
-  background: rgba(8, 12, 16, 0.85);
+  background: rgba(8, 12, 16, 0.92);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
 }
 
 .nav-logo {
@@ -131,6 +134,25 @@ body {
   color: var(--accent);
   font-size: 1.4rem;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-links.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 62px;
+    left: 0;
+    right: 0;
+    background: rgba(8,12,16,0.97);
+    padding: 2rem;
+    border-bottom: 1px solid rgba(0,229,255,0.15);
+    gap: 1.5rem;
+    z-index: 9998;
+  }
 }
 
 /* ── HERO ── */
@@ -350,6 +372,11 @@ body {
   width: 1px;
   height: 60px;
   background: var(--border);
+}
+
+/* ── SCROLL OFFSET for fixed nav ── */
+section[id], div[id] {
+  scroll-margin-top: 80px;
 }
 
 /* ── SECTIONS ── */
@@ -873,7 +900,6 @@ body {
 
 @media (max-width: 768px) {
   .nav { padding: 1rem 1.5rem; }
-  .nav-links { display: none; }
   .hamburger { display: block; }
   .projects-grid { grid-template-columns: 1fr; }
   .project-card--featured { grid-template-columns: 1fr; }
@@ -1457,7 +1483,7 @@ if (statsBar) statsObserver.observe(statsBar);
 
 
 // ── Scroll Reveal ──
-const reveals = document.querySelectorAll('.section, .skill-card, .project-card, .cert-card, .contact-card');
+const reveals = document.querySelectorAll('.skill-card, .project-card, .cert-card, .contact-card, .about-grid, .section-title, .section-label');
 
 reveals.forEach(el => el.classList.add('reveal'));
 
@@ -1528,30 +1554,34 @@ const hamburger = document.getElementById('hamburger');
 const navLinksEl = document.querySelector('.nav-links');
 let menuOpen = false;
 
+function closeMenu() {
+  menuOpen = false;
+  navLinksEl.removeAttribute('style');
+  navLinksEl.classList.remove('mobile-open');
+  hamburger.textContent = '☰';
+}
+
 if (hamburger) {
   hamburger.addEventListener('click', () => {
     menuOpen = !menuOpen;
-    navLinksEl.style.display = menuOpen ? 'flex' : 'none';
-    navLinksEl.style.flexDirection = 'column';
-    navLinksEl.style.position = 'fixed';
-    navLinksEl.style.top = '62px';
-    navLinksEl.style.left = '0';
-    navLinksEl.style.right = '0';
-    navLinksEl.style.background = 'rgba(8,12,16,0.97)';
-    navLinksEl.style.padding = '2rem';
-    navLinksEl.style.borderBottom = '1px solid rgba(0,229,255,0.15)';
-    navLinksEl.style.gap = '1.5rem';
-    hamburger.textContent = menuOpen ? '✕' : '☰';
+    if (menuOpen) {
+      navLinksEl.classList.add('mobile-open');
+      hamburger.textContent = '✕';
+    } else {
+      closeMenu();
+    }
   });
 
   navLinksEl.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      menuOpen = false;
-      navLinksEl.style.display = 'none';
-      hamburger.textContent = '☰';
+      if (window.innerWidth <= 768) closeMenu();
     });
   });
 }
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) closeMenu();
+});
 
 
 // ── Glitch on hover for hero title ──
