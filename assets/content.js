@@ -128,8 +128,7 @@ window.PORTFOLIO = {
       status: "complete",
       summary: "Planning and delivering a short work skill session in a workplace setting.",
       evidence: [
-        { code: "E2.1", title: "Work skill session: Outlook rules and folders", source: "Plan, learner records, feedback and observation checklist – Assessment Task 2", file: "evidence/taedel311/work-skill-session.pdf" },
-        { code: "E2.1", title: "Video recording of the session", source: "TAEDEL311 – Assessment Task 2", file: "" }
+        { code: "E2.1", title: "Work skill session: Outlook rules and folders", source: "Plan, learner records, feedback and observation checklist – Assessment Task 2", file: "evidence/taedel311/work-skill-session.pdf" }
       ],
       reflection: {
         title: "TAEDEL311 Reflection",
