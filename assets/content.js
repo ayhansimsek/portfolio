@@ -35,11 +35,11 @@ window.PORTFOLIO = {
       status: "complete",
       summary: "Planning my study, mapping my professional teaching practice and understanding the VET landscape I will be working in.",
       evidence: [
-        { code: "E1.1", title: "Yearly VET Study Plan (High-Level)", source: "Cluster 1 – Assessment Task 1, Part 1", file: "" },
-        { code: "E1.2", title: "Professional Teaching Map", source: "Cluster 1 – Assessment Task 2, Part 2", file: "" },
+        { code: "E1.1", title: "Yearly VET Study Plan (High-Level)", source: "Year planner balancing study, work and family – Assessment Task 1", file: "evidence/cluster-1/yearly-vet-study-plan.pdf" },
+        { code: "E1.2", title: "Professional Teaching Map", source: "Self-assessment of my teaching values, knowledge and skills – Assessment Task 2", file: "evidence/cluster-1/professional-teaching-map.pdf" },
         { code: "E1.3", title: "VET Landscape activity", source: "Cluster 1 – Session 4", file: "" },
-        { code: "E1.4", title: "Vocational Competency Matrix (VCM)", source: "Cluster 1 – Task 2", file: "" },
-        { code: "E1.5", title: "Professional Development Plan", source: "Cluster 1 – Task 2", file: "" }
+        { code: "E1.4", title: "Vocational Competency Matrix (VCM)", source: "My qualifications, industry experience and currency – Assessment Task 2", file: "evidence/cluster-1/vocational-competency-matrix.pdf" },
+        { code: "E1.5", title: "Professional Development Plan", source: "Skills I plan to develop as a trainer and how – Assessment Task 2", file: "evidence/cluster-1/professional-development-plan.pdf" }
       ],
       reflection: {
         title: "VET Trainer Philosophy",
@@ -70,7 +70,7 @@ window.PORTFOLIO = {
       status: "complete",
       summary: "Reading training packages, packaging rules and units of competency, and using them to build a Training and Assessment Strategy.",
       evidence: [
-        { code: "E2.1", title: "Training and Assessment Strategy (TAS)", source: "TAEDES411 – Task 2", file: "" }
+        { code: "E2.1", title: "Training and Assessment Strategy (TAS)", source: "Training program for a unit of competency – Assessment Task 2", file: "evidence/taedes411/training-and-assessment-strategy.pdf" }
       ],
       reflection: {
         title: "TAEDES411 Reflection",
@@ -98,10 +98,9 @@ window.PORTFOLIO = {
       status: "complete",
       summary: "Designing learning programs and resources for diverse learners, aligned with the AQF and with industry input.",
       evidence: [
-        { code: "E3.1", title: "Group Training and Delivery Plan", source: "Cluster 2 assessment", file: "" },
-        { code: "E3.2", title: "Session plan (unit 1)", source: "Cluster 2 assessment", file: "" },
-        { code: "E3.2", title: "Session plan (unit 2)", source: "Cluster 2 assessment", file: "" },
-        { code: "E3.3", title: "Learning resource I created", source: "Cluster 2 – PowerPoint, worksheet or visual aid", file: "" }
+        { code: "E3.1", title: "Group Training and Delivery Plans", source: "Two ICT units planned for an industry client – Assessment Task 3", file: "evidence/cluster-2/group-training-and-delivery-plans.pdf" },
+        { code: "E3.2", title: "Session plans (six sessions, two units)", source: "Session plans with peer and assessor feedback – Assessment Task 4", file: "evidence/cluster-2/session-plans.pdf" },
+        { code: "E3.3", title: "Foundation skills session and resources", source: "Delivered session with cheat sheet, glossary and learner feedback – Assessment Task 5", file: "evidence/cluster-2/foundation-skills-session.pdf" }
       ],
       reflection: {
         title: "Cluster 2 Reflection",
@@ -129,7 +128,8 @@ window.PORTFOLIO = {
       status: "complete",
       summary: "Planning and delivering a short work skill session in a workplace setting.",
       evidence: [
-        { code: "E2.1", title: "Recording of my work skill session", source: "TAEDEL311 – Task 2", file: "" }
+        { code: "E2.1", title: "Work skill session: Outlook rules and folders", source: "Plan, learner records, feedback and observation checklist – Assessment Task 2", file: "evidence/taedel311/work-skill-session.pdf" },
+        { code: "E2.1", title: "Video recording of the session", source: "TAEDEL311 – Assessment Task 2", file: "" }
       ],
       reflection: {
         title: "TAEDEL311 Reflection",
