@@ -1,71 +1,214 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-AU">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ayhan Simsek · Teacher Professional Portfolio</title>
-  <meta name="description" content="Teacher Professional Portfolio of Ayhan Simsek — TAE40122 Certificate IV in Training and Assessment, Box Hill Institute.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ayhan Simsek · IT trainer portfolio</title>
+<meta name="description" content="Ayhan Simsek: IT support professional and former Physics and ICT teacher, training to teach IT in the VET sector. TAE40122 portfolio.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231D1D1F'/><text x='16' y='21.5' text-anchor='middle' font-family='Arial' font-weight='700' font-size='14' fill='white'>AS</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/scrollcraft.css">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/home.css">
 </head>
-<body data-page="home">
+<body class="home">
 
-  <main>
-    <section class="hero">
-      <div class="wrap hero-anim">
-        <div class="eyebrow">TAE40122 Certificate IV in Training and Assessment</div>
-        <h1>Teacher<br><span class="soft">Professional Portfolio.</span></h1>
-        <p class="lead">My journey from IT support to vocational education — the work I produced, the feedback I received and what I learned along the way.</p>
-        <div class="cta">
-          <a class="btn" href="#journey-section">View my progress</a>
-          <a class="btn ghost" href="profile.html">Career profile ›</a>
-        </div>
-        <div class="progress-wrap meta">
-          <div class="progress-label"><span>Portfolio progress</span><span id="progress-text"></span></div>
-          <div class="bar"><i id="progress-bar"></i></div>
-        </div>
+<a class="skip" href="#profile">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__in">
+    <a class="nav__mark" href="index.html">Ayhan Simsek</a>
+    <nav aria-label="Main">
+      <ul class="nav__links">
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#teach">Teaching areas</a></li>
+        <li><a href="#journey">TAE journey</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="nav__cta" href="portfolio.html">Portfolio</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO: copy first, then the training room grows to full bleed. -->
+  <section class="hero">
+    <div class="hero__copy" data-sc-in data-sc-stagger="70">
+      <p class="eyebrow">TAE40122 Teacher Professional Portfolio</p>
+      <h1 class="hero__title">Ayhan Simsek</h1>
+      <p class="hero__sub"><span>IT support professional,</span> <span>training to teach IT in the VET sector.</span></p>
+      <p class="hero__actions">
+        <a class="btn" href="portfolio.html">View portfolio</a>
+        <a class="link link--arrow" href="#profile">Career profile</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="zoom" aria-label="From the service desk to the classroom">
+    <div class="zoom__stage">
+      <figure class="zoom__frame">
+        <picture>
+          <source media="(max-width: 760px)" srcset="assets/img/lab-m.webp">
+          <img class="zoom__img" src="assets/img/lab.webp" width="2400" height="1600" alt="A bright computer training room with rows of desks, monitors and a projector screen.">
+        </picture>
+        <div class="zoom__shade" aria-hidden="true"></div>
+        <p class="zoom__line">From the service desk<br>to the classroom.</p>
+      </figure>
+    </div>
+  </section>
+
+  <!-- PROFILE: the words light up as you read down. -->
+  <section class="profile" id="profile">
+    <div class="wrap">
+      <p class="eyebrow">VET career profile</p>
+      <p class="reveal-text" data-words>IT support professional with over 5 years of experience across government, education, retail and corporate environments, with deep hands-on experience in Microsoft technologies. Skilled in Level 1–2 service desk support, device deployment and asset management. Holds a Certificate IV in Cyber Security and uses AI tools effectively, with strong prompt engineering skills. Explaining technology to people who are not technical has been part of every job I have had. Now I am training to teach it.</p>
+    </div>
+  </section>
+
+  <!-- TECHNICAL SKILLS: straight from the CV skills list. -->
+  <section class="skills" id="skills">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--dark">Technical skills</p>
+      <h2 class="h2" data-sc-in>The tools I use every day.</h2>
+      <dl class="skill-grid" data-sc-in data-sc-stagger="60">
+        <div><dt>Operating systems</dt><dd>Windows 11, Windows Server 2019/2022, macOS, ChromeOS, iOS and iPadOS, Android, Ubuntu</dd></div>
+        <div><dt>Identity and access</dt><dd>Active Directory, Entra ID, Group Policy, Microsoft 365 Admin Center, Exchange Online, Google Workspace Admin, MFA</dd></div>
+        <div><dt>Service management</dt><dd>ITIL, ServiceNow, Jira Service Management, Zendesk, Freshservice, SLA management, knowledge base writing</dd></div>
+        <div><dt>Endpoint and devices</dt><dd>Microsoft Intune, Windows Autopilot, Google Admin Console, SOTI MobiControl, Zebra device staging, compliance policies</dd></div>
+        <div><dt>Networking and security</dt><dd>TCP/IP, DNS, DHCP, VLANs, Wi-Fi, firewalls, VPN, Wireshark, Mimecast, CrowdStrike Falcon, Splunk, Nessus</dd></div>
+        <div><dt>Virtualisation and cloud</dt><dd>Microsoft Azure, Hyper-V, VMware, Proxmox, Docker</dd></div>
+        <div><dt>Scripting and AI tools</dt><dd>PowerShell, Microsoft Copilot, ChatGPT, Claude, Gemini, prompt engineering</dd></div>
+        <div><dt>Remote support</dt><dd>TeamViewer, AnyDesk, Microsoft Teams, Zoom, Slack</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE: two careers, side by side, photos drift slightly. -->
+  <section class="exp" id="experience" data-sc-act="flow">
+    <div class="wrap">
+      <p class="eyebrow">Experience</p>
+      <h2 class="h2" data-sc-in>Two careers.<br>One skill: explaining it.</h2>
+      <div class="exp__grid">
+        <article class="exp__col">
+          <figure class="exp__img"><img src="assets/img/empty-class.webp" width="1400" height="928" alt="An empty school classroom with a chalkboard and science benches." loading="lazy" data-sc-parallax="-0.5"></figure>
+          <h3>Teaching</h3>
+          <ol class="roles" data-sc-in data-sc-stagger="60">
+            <li><span class="roles__when">2019 to 2021</span><span class="roles__what">Physics and ICT Teacher</span><span class="roles__where">IELEV German Private College, Turkey</span></li>
+            <li><span class="roles__when">2015 to 2017</span><span class="roles__what">System Admin and ICT Teacher</span><span class="roles__where">Paradise High School, Papua New Guinea</span></li>
+          </ol>
+        </article>
+        <article class="exp__col">
+          <figure class="exp__img"><img src="assets/img/headset.webp" width="1400" height="934" alt="A support headset resting beside an open laptop." loading="lazy" data-sc-parallax="-0.5"></figure>
+          <h3>IT support</h3>
+          <ol class="roles" data-sc-in data-sc-stagger="60">
+            <li><span class="roles__when">2026 to now</span><span class="roles__what">IDS Officer</span><span class="roles__where">Victorian Electoral Commission</span></li>
+            <li><span class="roles__when">2025 to 2026</span><span class="roles__what">IT Support Engineer</span><span class="roles__where">Source Central, multi-school support</span></li>
+            <li><span class="roles__when">2023 to 2025</span><span class="roles__what">IT Service Desk Analyst</span><span class="roles__where">Baby Bunting, head office and 70+ stores</span></li>
+            <li><span class="roles__when">2013 to 2014</span><span class="roles__what">Hardware Technician</span><span class="roles__where">ANZ Global Banking, Philippines</span></li>
+            <li><span class="roles__when">2012 to 2013</span><span class="roles__what">Hardware Support Specialist</span><span class="roles__where">TUIK, Turkey</span></li>
+          </ol>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section alt">
-      <div class="wrap narrow">
-        <div class="section-head reveal">
-          <h2>About this portfolio.</h2>
+  <!-- TEACHING AREAS: the page holds and the cards slide past. -->
+  <section class="teach" id="teach" data-sc-act="pan" data-sc-span="3.4">
+    <div data-sc-stage class="teach__stage">
+      <div class="rail" data-sc-pan="0.04">
+        <div class="rail__lead">
+          <p class="eyebrow">What I can teach</p>
+          <h2 class="h2">Four areas I know from the inside.</h2>
+          <p class="lead">From my Vocational Competency Matrix: the industry areas where my current skills support the training I want to deliver.</p>
         </div>
-        <div class="prose reveal">
-          <p>This portfolio brings together the evidence I have collected while completing my Certificate IV in Training and Assessment at Box Hill Institute. It covers the units of TAEPDD401 <em>Work effectively in the VET sector</em> and BSBPEF301 <em>Organise personal work priorities</em>, and grows with each cluster of the course.</p>
-          <p>Each unit page holds the completed work from my assessments and a short reflection on what I learned and how it shapes my practice as a VET trainer.</p>
-        </div>
+        <article class="card">
+          <figure><img src="assets/img/laptop-repair.webp" width="1400" height="1866" alt="Hands opening a laptop with a screwdriver to reach its components." loading="lazy"></figure>
+          <h3>IT support and systems</h3>
+          <p>Help desk, Windows, macOS, ChromeOS and mobile devices, Active Directory, Entra ID, Microsoft 365, ticketing and onboarding.</p>
+        </article>
+        <article class="card">
+          <figure><img src="assets/img/lock2.webp" width="1400" height="934" alt="A padlock resting on a white keyboard." loading="lazy"></figure>
+          <h3>Cyber security</h3>
+          <p>Endpoint and email security, phishing checks, patching, log analysis and cyber safety for staff and students.</p>
+        </article>
+        <article class="card">
+          <figure><img src="assets/img/utp.webp" width="1400" height="934" alt="Blue network cables plugged into a patch panel." loading="lazy"></figure>
+          <h3>Networks and devices</h3>
+          <p>TCP/IP, DNS, DHCP, VLANs, Wi-Fi, Intune and device rollouts at scale.</p>
+        </article>
+        <article class="card">
+          <figure><img src="assets/img/mbp-typing.webp" width="1400" height="934" alt="Hands typing on a laptop." loading="lazy"></figure>
+          <h3>Digital workplace skills</h3>
+          <p>Everyday office technology: Outlook, Excel, mail merge, password managers and safe online work.</p>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="journey-section">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <h2>My learning journey.</h2>
-          <p>Every cluster and stand-alone unit of the course, in the order I completed them.</p>
-        </div>
-        <div class="grid stagger" id="journey"></div>
-      </div>
-    </section>
+  <!-- QUALIFICATIONS -->
+  <section class="quals">
+    <div class="wrap">
+      <p class="eyebrow">Qualifications</p>
+      <h2 class="h2" data-sc-in>What I have studied.</h2>
+      <ul class="qual-list" data-sc-in data-sc-stagger="60">
+        <li><span class="q__name">Certificate IV in Training and Assessment (TAE40122)</span><span class="q__meta">Box Hill Institute · in progress</span></li>
+        <li><span class="q__name">Certificate IV in Cyber Security</span><span class="q__meta">Box Hill Institute · 2024</span></li>
+        <li><span class="q__name">Front-End Web Development</span><span class="q__meta">General Assembly · 2023</span></li>
+        <li><span class="q__name">Teaching Certificate</span><span class="q__meta">Gazi University, Turkey · 2017</span></li>
+        <li><span class="q__name">Bachelor degree, Physics and Computer Science</span><span class="q__meta">Pamukkale University, Turkey · 2010</span></li>
+      </ul>
+    </div>
+  </section>
 
-    <section class="section alt" id="contact">
-      <div class="wrap narrow" style="text-align:center">
-        <div class="section-head reveal" style="margin-bottom:20px">
-          <h2>Get in touch.</h2>
-          <p style="margin-left:auto;margin-right:auto">Open to IT trainer and educator roles in the VET sector.</p>
-        </div>
-        <div class="cta reveal" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-          <a class="btn" href="mailto:ayhansimsek@hotmail.com">Email me</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/ayhan-simsek-700a11181/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        </div>
-      </div>
-    </section>
-  </main>
+  <!-- TAE JOURNEY: every unit, in order, linking into the portfolio. -->
+  <section class="journey" id="journey">
+    <div class="wrap">
+      <p class="eyebrow">My TAE journey</p>
+      <h2 class="h2" data-sc-in>Seven units, one portfolio.</h2>
+      <p class="bar__label">5 of 7 units complete</p>
+      <div class="bar" data-sc-in><span class="bar__fill"></span></div>
+      <p class="lead journey__lead">This portfolio collects the work I produced, the feedback I received and what I learned in each cluster of my Certificate IV in Training and Assessment at Box Hill Institute.</p>
+      <ol class="units" data-sc-in data-sc-stagger="50">
+        <li><a href="portfolio.html#cluster-1"><span class="units__code">Cluster 1</span><span class="units__name">Working in the VET sector</span><span class="units__st units__st--done">Complete</span></a></li>
+        <li><a href="portfolio.html#taedes411"><span class="units__code">TAEDES411</span><span class="units__name">Use nationally recognised training products</span><span class="units__st units__st--done">Complete</span></a></li>
+        <li><a href="portfolio.html#cluster-2"><span class="units__code">Cluster 2</span><span class="units__name">Designing learning programs</span><span class="units__st units__st--done">Complete</span></a></li>
+        <li><a href="portfolio.html#taedel311"><span class="units__code">TAEDEL311</span><span class="units__name">Provide work skill instruction</span><span class="units__st units__st--done">Complete</span></a></li>
+        <li><a href="portfolio.html#cluster-3"><span class="units__code">Cluster 3</span><span class="units__name">Delivering group and workplace training</span><span class="units__st units__st--done">Complete</span></a></li>
+        <li><a href="portfolio.html#cluster-4"><span class="units__code">Cluster 4</span><span class="units__name">Competency-based assessment</span><span class="units__st units__st--now">In progress</span></a></li>
+        <li><a href="portfolio.html#cluster-5"><span class="units__code">Cluster 5</span><span class="units__name">Online learning and assessment</span><span class="units__st">Upcoming</span></a></li>
+      </ol>
+    </div>
+  </section>
 
-  <script src="assets/content.js"></script>
-  <script src="assets/app.js"></script>
+  <!-- CONTACT: the classroom, and one action. -->
+  <section class="contact" id="contact" data-sc-act="flow">
+    <figure class="contact__bg" data-sc-reveal="iris" data-sc-reveal-at="0 0.5">
+      <img src="assets/img/projector.webp" width="1400" height="934" alt="" loading="lazy">
+    </figure>
+    <div class="contact__copy" data-sc-in data-sc-stagger="80">
+      <h2 class="h2 h2--light">Open to IT trainer roles.</h2>
+      <p class="contact__sub">Educator and trainer roles in the VET sector, in IT support, networks and cyber security.</p>
+      <p class="hero__actions">
+        <a class="btn btn--light" href="mailto:ayhansimsek@hotmail.com">Email me</a>
+        <a class="link link--light link--arrow" href="https://www.linkedin.com/in/ayhan-simsek-700a11181/" rel="noopener" target="_blank">LinkedIn</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <p>© 2026 Ayhan Simsek · TAE40122 Certificate IV in Training and Assessment · Box Hill Institute</p>
+  </div>
+</footer>
+
+<script src="assets/scrollcraft.js"></script>
+<script>ScrollCraft.mount(document.body);</script>
+<script src="assets/home.js"></script>
 </body>
 </html>

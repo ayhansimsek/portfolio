@@ -1,0 +1,50 @@
+/* Shared theme for both pages. Two grounds, one hue of accent in two
+   lightnesses (Apple blue), Geist for everything, Geist Mono only for labels. */
+:root {
+  --l-canvas: #F5F5F7;  --l-surface: #FFFFFF;
+  --l-ink:    #1D1D1F;  --l-soft:    #56565C;
+  --l-accent: #0066CC;  --l-line:    #D2D2D7;
+
+  --d-canvas: #0B0B0D;  --d-surface: #161618;
+  --d-ink:    #F5F5F7;  --d-soft:    #A1A1A6;
+  --d-accent: #2997FF;  --d-line:    #2C2C30;
+
+  --sc-canvas: var(--l-canvas);  --sc-surface: var(--l-surface);
+  --sc-ink: var(--l-ink);        --sc-ink-soft: var(--l-soft);
+  --sc-accent: var(--l-accent);  --sc-accent-ink: #FFFFFF;
+  --sc-font-display: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --sc-font-text:    "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --sc-font-mono:    "Geist Mono", ui-monospace, monospace;
+  --sc-shadow-color: 240 6% 10%;
+}
+
+.sc-display, h1, h2, h3 { font-weight: 600; }
+
+.skip {
+  position: fixed; left: 16px; top: 16px; z-index: 100;
+  padding: 10px 16px; border-radius: 999px;
+  background: var(--l-ink); color: #fff; text-decoration: none;
+  transform: translateY(-160%);
+  transition: transform 160ms var(--sc-ease-out);
+}
+.skip:focus-visible { transform: none; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  min-height: 48px; padding: 0 24px; border-radius: 999px;
+  background: var(--l-accent); color: #fff;
+  font: 500 var(--sc-t-base)/1 var(--sc-font-text);
+  text-decoration: none; white-space: nowrap;
+  transition: background-color 160ms var(--sc-ease-out), transform 120ms var(--sc-ease-out);
+}
+@media (hover: hover) and (pointer: fine) { .btn:hover { background: #0057B0; } }
+.btn:active { transform: scale(0.97); }
+.btn:focus-visible, a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--l-accent); outline-offset: 3px;
+}
+
+.link {
+  color: var(--l-accent);
+  text-decoration: underline; text-underline-offset: 0.22em; text-decoration-thickness: 1px;
+}
+@media (hover: hover) and (pointer: fine) { .link:hover { text-decoration-thickness: 2px; } }
